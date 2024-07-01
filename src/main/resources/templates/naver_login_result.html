@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:if="${session.user != null}">
+		<p>[[${session.user}]]</p>
+		<p><a href="/naver/profile">사용자 정보 읽기</a></p>
+		<p><a href="/naver/refresh">토큰 재발급</a></p>
+		<p><a href="/naver/delete">토큰 삭제(탈퇴)</a></p>
+		<p><a href="/naver/logout">로그아웃</a></p>
+		<div th:if="${userInfo != null}">[[${userInfo}]]</div>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:if="${session.user != null}">
+		<div>[[${session.user}]]</div>
+		<p th:text="${session.user}"></p>
+		<p><a href="/kakao/profile">사용자 정보 읽기</a></p>
+		<p><a href="/kakao/refresh">토큰 재발급</a></p>
+		<p><a href="/kakao/delete">토큰 삭제</a></p>
+		<p><a th:href="${logoutURL}">로그아웃</a></p>
+		<div th:if="${userInfo != null}">[[${userInfo}]]</div>
+	</div>
+</body>
+</html>
+
+
