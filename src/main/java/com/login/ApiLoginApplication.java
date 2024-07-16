@@ -8,6 +8,7 @@ public class ApiLoginApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiLoginApplication.class, args);
+		System.out.println("sfa");
 	}
 
 }
